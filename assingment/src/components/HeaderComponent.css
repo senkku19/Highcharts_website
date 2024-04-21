@@ -1,0 +1,27 @@
+.navbar{
+    background-color: rgb(230, 216, 198);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color:rgb(19, 30, 40);
+}
+
+.navbar h3{
+    margin-left: 20px;
+}
+
+.title {
+    margin-right: 60px; 
+    font-size: 34px;
+    flex: 0 auto;
+}
+
+.navlinks-container {
+    margin-right: 20px; 
+    flex: 0 auto;
+}

@@ -1,0 +1,44 @@
+.dateContainer{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.text{
+    font-weight: normal;
+}
+
+.dateContainer label{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+.dateContainer input{
+    border-radius: 10px;
+    width: 110%;
+    height: 30px;
+    border-width: 1px;
+    align-content: center;
+}
+
+.oneDate{
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.secondDate{
+    margin-left: 30px;
+}
+
+
+.button{
+    margin-left: 10px;
+    background-color: rgb(169, 202, 236);
+    font-weight: bolder;
+    width: 100px;
+    height: 24px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgb(75, 75, 107);
+}

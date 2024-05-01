@@ -1,0 +1,63 @@
+.settings-overlay {
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+     /* Prevent background scrolling */
+}
+
+.settings {
+    display: block;
+    background: white;
+    width:80%;
+    max-height: 70vh; /* Set maximum height for scrollable modal */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative; /* Required for absolute positioning of close button */
+}
+
+.settings-close {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    background-color: white;
+    font-weight: bold;
+    border-color: black;
+    cursor: pointer;
+}
+
+.settings::-webkit-scrollbar {
+    width: 20px; 
+    right: 7%;
+    left: 60%;
+}
+
+.settings::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 1rem; 
+}
+
+.settings::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px; 
+}
+
+.settings::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

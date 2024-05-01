@@ -2,7 +2,7 @@ import React from "react";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
 
-interface ChartProps {
+export interface ChartProps {
     options: Highcharts.Options;
 }
 

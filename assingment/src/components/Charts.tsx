@@ -1,100 +1,36 @@
-import { useEffect, useState } from "react";
-import { getMultipleGamesById } from "../store";
+import React from 'react';
 import Highcharts from 'highcharts';
 import Chart from "./Chart";
-import { GameLookupResponse } from "../service/types";
+import './css/Chart.css'
 
-function Charts() {
-    const [gameCharts, setGameCharts] = useState<GameLookupResponse[]>([]);
-    const [options, setOptions] = useState<Highcharts.Options[] | null>(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const numbers = [612, 128, 129, 130];
-                getMultipleGamesById(numbers).then((data) => setGameCharts(data))
-            } catch (error) {
-                console.error("Error", error);
-            }
-        };
-
-        fetchData();
-    }, []);
-
-    useEffect(() => {
-        console.log("täällä",gameCharts)
-    }, [gameCharts])
-
-    useEffect(() => {
-        if (gameCharts.length !== 0) {
-            // Check if gameCharts is not null and is an array
-            var games: Highcharts.Options[] = [];
-    
-           Object.entries(gameCharts).forEach(([key, value]) => {
-            var names: string[];
-            names= value.deals.map(deal => "'"+ deal.storeID + "'");
-            const string = names.join(",");
-            console.log(string);
-            games.push({
-                title: {
-                    text: value.info.title
-                },
-                xAxis: {
-                    categories: [
-                        string
-                    ]
-
-                },
-                
-                series: [{
-                    type: 'column', 
-                    data: value.deals.map((deal) => 
-                        parseFloat(deal.price))
-                }]
-            })
-            
-            setOptions(games);
-           });
-
-           
-console.log(games);
-
+interface ChartsDateRange {
+    options: Highcharts.Options[] | null;
 }
-}, [gameCharts]);
-    
 
-   /* useEffect(() => {
-        if (gameCharts.length !== 0) {
-            // Check if gameCharts is not null and is an array
-            var games: Highcharts.Options[] = [];
-            for (const game of gameCharts){
-                games.push({
-                    title: {
-                        text: game.info.title
-                    },
-                    series: [{
-                        type: 'line', 
-                        data: game.deals.map((deal) => parseFloat(deal.price))
-                    }]
-                })
-            }
-            setOptions(games);
-        }
-    }, [gameCharts]);*/
-    
-    
 
-    if (!options) {
-        return <h1>No charts yet...</h1>;
+const Charts: React.FC<ChartsDateRange> = ({options}) => {
+    if (options === null || options.length===0) {
+        return (
+        <div className="toppane"> 
+            <h1>No charts yet...</h1> 
+        </div>
+        )
     }
 
     return (
         <div>
-            {options.map((option) => (
+             <div className="toppane">
+            </div>
+            {options.map((option, index) => (
+                <div key = {index} className="chartsContainer">
                 <Chart options = {option}/>
+                </div>
             ))}
         </div>
     );
 }
+
+
 
 export default Charts;

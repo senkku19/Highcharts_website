@@ -1,0 +1,81 @@
+.form{
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.MuiMenu-list {
+    z-index: 10001; 
+}
+
+.form Button{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.inputfields{
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.inputfields input{
+    padding: 10px 10px;
+    width: 90%;
+    margin-top: 10px;
+    margin-right: 60px;
+}
+
+.inputfields label{
+    display: flex;
+    align-items: center;
+}
+
+
+.selectfields{
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+    
+    margin-top: 10px;
+}
+
+.selectfields select{
+    padding: 10px 10px;
+    width: 70%;
+}
+.selectfields option{
+    padding: 10px 10px;
+}
+
+.selectfields label{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fillingcharts {
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+}
+
+.close-button{
+    margin-left: 10px;
+    font-weight: bolder;
+    background-color: rgb(227, 216, 202);
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 1px;
+}

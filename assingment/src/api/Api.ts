@@ -1,11 +1,10 @@
 import axios from "axios";
-export const URL = "https://www.cheapshark.com/api/1.0";
+export const URL = "https://api.worldbank.org/v2";
 
-export const fetchGameData = async(symbol: string, interval:string)=> {
+export const fetchGPD = async(symbol: string, interval:string)=> {
     try{
         const response = await axios.get(URL, {
-            params: {
-                
+            params: {   
                 symbol: symbol,
                 interval: interval,
             }

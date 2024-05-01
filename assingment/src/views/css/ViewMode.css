@@ -1,0 +1,14 @@
+.viewContainer{
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.middlepane{
+    width: 100%;
+    height: 100vh;
+}
+
+.d-flex{
+    display: flex;
+}

@@ -37,7 +37,10 @@ const DateSelector: React.FC<DateSelectorProps> = ({start, end, onDateRangeEvent
         />
         </span>
         <span className="secondDate">
-            <button className="button" onClick={() =>{ 
+            <button 
+            className="button"
+            style={{backgroundColor:'lightblue'}} 
+            onClick={() =>{ 
                 if (start && end){
                      onDateRangeEvent(start, end);
                  }

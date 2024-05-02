@@ -6,17 +6,19 @@
 
 .text{
     font-weight: normal;
+    margin-bottom: 7.5px;
 }
 
 .dateContainer label{
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 
 .dateContainer input{
     border-radius: 10px;
-    width: 110%;
+    padding: 2px 4px;
+    width: 120%;
     height: 30px;
     border-width: 1px;
     align-content: center;
@@ -29,16 +31,17 @@
 
 .secondDate{
     margin-left: 30px;
+    margin-right: 10px;
 }
 
 
 .button{
     margin-left: 10px;
-    background-color: rgb(169, 202, 236);
     font-weight: bolder;
     width: 100px;
-    height: 24px;
+    height: 27px;
+    margin-top: 3px;
+    margin-bottom: 3px;
     border-radius: 10px;
     border-width: 1px;
-    border-color: rgb(75, 75, 107);
 }

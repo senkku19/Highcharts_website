@@ -77,19 +77,11 @@ useEffect(() => {
 
 
 
-const handleChangeCategory = (
-    id:number, 
-    event:React.ChangeEvent<HTMLInputElement>,
-) => {
+const handleChangeCategory = ( id:number, event:React.ChangeEvent<HTMLInputElement> ) => {
     const index = formData.findIndex(n => n.id === id);
-    if (index !== -1) {
-        const updatedFormData = [...formData];
-        updatedFormData[index] = {
-            ...updatedFormData[index],
-            [event.target.name]: event.target.name === 'values' ? parseFloat(event.target.value) : event.target.value
-        };
-        setFormData(updatedFormData);
-    }
+    let helpFormData = [...formData] as any
+    helpFormData[index][event.target.name]=event.target.name === 'values' ? parseFloat(event.target.value) : event.target.value;
+    setFormData(helpFormData);
 };
 
     
@@ -202,7 +194,7 @@ const handleChangeCategory = (
                         name='values' 
                         type='number'
                         id={`value-${data.id}`}
-                        value={data.values !== null ? data.values : ''}
+                        value={data.values !== null && !isNaN(data.values) ? data.values.toString() : ''}
                         onChange={(e) => handleChangeCategory(data.id, e)}
                     />
                 </div> 

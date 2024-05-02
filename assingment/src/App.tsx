@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HeaderComponent from './components/HeaderComponent';
 import ViewMode from './views/ViewMode';
 import SettingsView from './views/SettingsView';
-import { GPDdata, GDPCountryResponse, GDPinfo } from './api/types';
+import { GPDdata, GDPCountryResponse } from './api/types';
 import { getMultipleCountryGDP } from './api';
 import Highcharts from "highcharts";
 
@@ -36,12 +36,9 @@ const App: React.FC= () => {
 
           Object.entries(GDPcharts).forEach(([index, values]) =>{
               var datas2: GPDdata[] = [];
-              var metadata: GDPinfo;
   
               Object.entries(values).forEach(([key, value]) => {
-                  if (key === '0'){
-                      metadata = value;
-                  } else {
+                if (key === '1') {
                       datas2 = value;
                   }
           })

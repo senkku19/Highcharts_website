@@ -3,7 +3,6 @@ import './css/SettingsView.css'
 import Settings from "./Settings";
 import useSettings from "./useSettings";
 import ChartsEditing from "../components/ChartsEditing";
-import imageToAdd from "./../chartPic.png"
 
 
 interface SettingsCharts{

@@ -46,8 +46,8 @@ const App: React.FC= () => {
           const category: any[] = []; 
           const datas: any[] = [];
           datas2.map( (value) => { 
-          category.push(value.date)
-          datas.push(value.value)
+            category.push(value.date)
+            datas.push(value.value)
           })
 
           charts.push({

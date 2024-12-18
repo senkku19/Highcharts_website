@@ -7,3 +7,7 @@ A simple website where you can:
 
 ## Tools used to create this website
 This website has been created with typescript, react and highcharts.
+
+## Live website to view
+
+You can view the live website via this link: [Highchart_website](https://highcharts-website.vercel.app/)

@@ -19,7 +19,7 @@ const App: React.FC= () => {
   useEffect(() => {
       const fetchData = async () => {
           try {
-              const countryCode = [/*"DE", "JP",*/ "ES", "MY", "ZA" ];
+              const countryCode = ["DE", "JP", "ES", "MY", "ZA" ];
              getMultipleCountryGDP(countryCode).then((data) =>   setGDPCharts(data)); 
           } catch (error) {
               console.error("Error", error);
